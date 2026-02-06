@@ -1,0 +1,14 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Match any document in the database
+    match /{document=**} {
+      // Allow read/write access to everyone. 
+      // NOTE: This is required because the app currently uses custom authentication 
+      // instead of Firebase Authentication. To secure this, integrate Firebase Auth.
+      allow read, write: if true;
+    }
+  }
+}

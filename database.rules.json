@@ -1,0 +1,18 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "users": {
+      ".indexOn": ["email", "role"]
+    },
+    "attendance": {
+      ".indexOn": ["userId", "date", "status"]
+    },
+    "leaveRequests": {
+      ".indexOn": ["userId", "status", "appliedDate"]
+    },
+    "leaveBalances": {
+      ".indexOn": ["userId"]
+    }
+  }
+}
